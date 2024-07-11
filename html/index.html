@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Finder</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #171515;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: #4311cc;
+        }
+
+        .search-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .search-container input {
+            width: 300px;
+            padding: 10px;
+            border-radius: 25px;
+            border: 1px solid #4500e8;
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .search-container input::placeholder {
+            color: #ccc;
+        }
+
+        .corner-line {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 5px solid transparent;
+            border-image: linear-gradient(to right, #e8ff00, #4d00ff) 1;
+        }
+
+        .corner-line.top-left {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .corner-line.top-right {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .corner-line.bottom-left {
+            bottom: 0;
+            left: 0;
+            border-right: none;
+            border-top: none;
+        }
+
+        .corner-line.bottom-right {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+        }
+
+        .logo {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .logo.top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .logo.bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Ludo Finder</h1>
+        </header>
+        <div class="search-container">
+            <input type="text" placeholder="Digite sua dúvida..." />
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+    <div class="corner-line top-left"></div>
+    <div class="corner-line top-right"></div>
+    <div class="corner-line bottom-left"></div>
+    <div class="corner-line bottom-right"></div>
+    <div class="logo top-left" style="background-image: url('logo.png');"></div>
+    <div class="logo bottom-right" style="background-image: url('logo.png');"></div>
+    <img id="foto" class="rounded" src="./img/logo.png" alt="Foto Logo">
+</body>
+</html>
+
