@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludo Finder</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Neon+Vibes&display=swap">
     <style>
         body {
             margin: 0;
@@ -14,31 +14,35 @@
             background-color: #000000;
             color: #fff;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
             position: relative;
-            
         }
 
-        .container {
+        .header {
+            position: absolute;
+            top: 250px;
             text-align: center;
+            width: 100%;
         }
 
         .header h1 {
             font-family: 'Neon Vibes', cursive;
             color: #fff;
             font-size: 4rem;
-            text-align: center;
             text-transform: uppercase;
             text-shadow: 0 0 5px rgb(174, 5, 211), 0 0 10px rgb(184, 7, 194), 0 0 20px rgb(112, 11, 199), 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
         }
 
         .search-container {
             position: relative;
-            display: inline-block;
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
         }
 
         .search-container input {
@@ -47,6 +51,7 @@
             border-radius: 25px;
             border: 1px solid #4500e8;
             outline: none;
+            text-align: center;
         }
 
         .search-icon {
@@ -116,20 +121,15 @@
             bottom: 10px;
             right: 10px;
         }
-
     </style>
 </head>
 <body>
-    <div class="container" style="
-        padding-bottom: 600px;"
-        >
-        <header class="header">
-            <h1>Ludo Finder</h1>
-        </header>
-        <div class="search-container">
-            <input type="text" placeholder="Digite sua dúvida..." />
-            <span class="search-icon">🔍</span>
-        </div>
+    <header class="header">
+        <h1>Ludo Finder</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" placeholder="Digite sua dúvida..." />
+        <span class="search-icon">🔍</span>
     </div>
     <div class="corner-line top-left"></div>
     <div class="corner-line top-right"></div>
@@ -137,7 +137,7 @@
     <div class="corner-line bottom-right"></div>
     <div class="logo top-left" style="background-image: url('./img/logo.png');"></div>
     <div class="logo bottom-right" style="background-image: url('logo.png');"></div>
-    
 </body>
 </html>
+
 
